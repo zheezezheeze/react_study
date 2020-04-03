@@ -3,7 +3,7 @@
 이 함수에 스케줄된 다른 함수는 영향을 받지 않기 때문에
 다른 상태변화가 일어나는 콜백함수들은 또다른 action으로 감싸져야 한다.
 
-1. Promise
+##1. Promise
 ```javascript
 mobx.configure({ enforceActions: 'observed' })
 
@@ -30,7 +30,7 @@ class Store {
 }
 ```
 
-2. runInAction : 상태변화를 일으키는 콜백action만 따로 적용하는 방법 
+##2. runInAction : 상태변화를 일으키는 콜백action만 따로 적용하는 방법 
 ```javascript
 mobx.configure({ enforceActions: 'observed' })
 
@@ -62,7 +62,7 @@ class Store {
 }
 ```
 
-3. async / await
+##3. async / await
 ```javascript
 mobx.configure({ enforceActions: 'observed' })
 
@@ -90,7 +90,7 @@ class Store {
 }
 ```
 
-4. flows : decorator 사용X
+##4. flows : decorator 사용X
 ```javascript
 mobx.configure({ enforceActions: 'observed' })
 class Store {
