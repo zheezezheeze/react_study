@@ -1,11 +1,7 @@
-# react_study
 
-```javascript
-let a = 10;
-console.log(a);
-```
+# lodash 메서드
 
-## lodash 메서드
+## _.isEmpty(value) : value가 Object 또는 복수데이터인지 확인
 
 ```javascript
 function isEmpty(value) {
@@ -32,3 +28,30 @@ for (var key in value) {
 return true;
 }
 ```
+
+## _.get : object를 리턴받는 메서드
+```javascript
+function get(object, path, defaultValue) {
+var result = object == null ? undefined : baseGet(object, path);
+return result === undefined ? defaultValue : result;
+}
+```
+
+## _.concat : array 래핑 메서드
+```javascript
+function concat() {
+var length = arguments.length;
+if (!length) {
+return [];
+}
+var args = Array(length - 1),
+  array = arguments[0],
+  index = length;
+
+while (index--) {
+args[index - 1] = arguments[index];
+}
+return arrayPush(isArray(array) ? copyArray(array) : [array], baseFlatten(args, 1));
+}
+```
+
