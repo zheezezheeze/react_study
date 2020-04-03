@@ -30,6 +30,7 @@ function isEmpty(value) {
 ```
 
 ## _.get : object를 리턴받는 메서드
+
 ```javascript
 function get(object, path, defaultValue) {
   var result = object == null ? undefined : baseGet(object, path);
@@ -38,6 +39,7 @@ function get(object, path, defaultValue) {
 ```
 
 ## _.concat : array 래핑 메서드
+
 ```javascript
 function concat() {
   var length = arguments.length;
@@ -56,6 +58,7 @@ function concat() {
 ```
 
 ## _.clone : 값 복사
+
 ```javascript
 function clone(value) {
   return baseClone(value, CLONE_SYMBOLS_FLAG);
@@ -138,6 +141,7 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
 ```
 
 ## _.map
+
 ```javascript
 function map(collection, iteratee) {
   var func = isArray(collection) ? arrayMap : baseMap;
@@ -169,5 +173,14 @@ function baseMap(collection, iteratee) {
     result[++index] = iteratee(value, key, collection);
   });
   return result;
+}
+```
+
+## _.last
+
+```javascript
+function last(array) {
+  var length = array == null ? 0 : array.length;
+  return length ? array[length - 1] : undefined;
 }
 ```
